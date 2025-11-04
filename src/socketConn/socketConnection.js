@@ -4,7 +4,7 @@ import {store} from "../redux/store"
 import { setElements, updateElements } from "../redux/whiteboardReducer";
 import { updateCursorPosition } from "../redux/cursorSlice";
 export const connectionWithSocketServer=()=>{
-  socket=io("http://localhost:8080")
+  socket=io("https://whiteboardbackend-63bg.onrender.com")
   socket.on("connect",()=>{
     console.log("connected to socket io server")
   })
