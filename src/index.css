@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.menu_container {
+  position: absolute;
+  top: 0;
+  width: 350px;
+  left: calc(50% - 175px);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #eeeeee;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100; /* Higher z-index to stay above canvas */
+  pointer-events: auto; /* Ensure menu buttons are clickable */
+}
+
+.menu_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: #FFF1DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+  pointer-events: auto; /* Ensure buttons are clickable */
+}
+
+.menu_icon {
+  width: 24px;
+  height: 24px;
+  color: black;
+}
+
+.menu_button:hover {
+  background-color: #E8D5C4;
+}
+
+.menu_button:active {
+  background-color: #D7BFAF;
+}
+
+.menu_button_active {
+  background-color: #D7BFAF;
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Add cursor styles */
+.cursor-icon {
+  position: fixed !important; /* Use fixed positioning */
+  z-index: 1000; /* Highest z-index to appear above everything */
+  pointer-events: none; /* Don't interfere with mouse events */
+}
